@@ -7,7 +7,7 @@ class personalDetails{
     private String FirstName,LastName,Address,City,State,Email;
     long Zip,PhoneNumber;
 
-    //create Constructor of the class to pass the parameters to constructor
+    //We create Constructor of the class to pass the parameters to constructor
     public personalDetails(String FirstName,String LastName,String Address,String City,String State,String Email,long Zip,long PhoneNumber){
         this.FirstName=FirstName;
         this.LastName=LastName;
@@ -204,7 +204,8 @@ public class AddressBook {
             int choice = Sc.nextInt();
             switch (choice) {
                 case 1:
-                    addPerson();
+                    list.add(addPerson());
+                    //addPerson();
                     break;
                 case 2:
                     editPersonalDetails();
@@ -212,8 +213,7 @@ public class AddressBook {
                 case 3: removePersonDetails();
                     break;
             }
-            personalDetails personalDetail1 = addPerson();
-            list.add(personalDetail1);
+            //personalDetails personalDetail1 = addPerson();
             System.out.println("If You Want to Make Changes In AddressBook Then Enter 1 Else 0: ");
             Val = Sc.nextInt();
         }while (Val==1);
